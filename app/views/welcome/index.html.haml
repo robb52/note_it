@@ -1,1 +1,33 @@
-%h1 This is Welcome Page
+#banner
+  .banner_content
+    %h1 Note It
+    %p Your online notebook. Never forget an idea again.
+    %button= link_to "Sign Up", new_user_registration_path
+
+#testimonial
+  .wrapper
+    %p.quote "The best notebook app. Ever!"
+    %p.name - Rob Brown
+
+#callouts
+  .callout_inner
+    .wrapper
+      .callout
+        %h2 Notes
+        %p Freegan drinking vinegar four dollar toast, try-hard snackwave aesthetic keytar truffaut. Truffaut scenester wayfarers tumeric pickled chartreuse. Photo booth 8-bit hot chicken, man braid woke sustainable mixtape. Bespoke celiac hammock, butcher waistcoat enamel pin master cleanse.
+      .callout
+        %h2 Swivle King
+        %p Swag typewriter jianbing activated charcoal everyday carry vape truffaut skateboard. Intelligentsia chartreuse squid, adaptogen mlkshk whatever man bun williamsburg. Fam kombucha la croix 8-bit. Franzen raw denim cloud bread health goth post-ironic.
+      .callout
+        %h2 Weenie Beenies
+        %p Freegan drinking vinegar four dollar toast, try-hard snackwave aesthetic keytar truffaut. Truffaut scenester wayfarers tumeric pickled chartreuse. Photo booth 8-bit hot chicken, man braid woke sustainable mixtape. Bespoke celiac hammock, butcher waistcoat enamel pin master cleanse.
+
+#bottom_cta
+  .wrapper
+    %h2 Don't wait!
+    %br
+    %p You really need to sign up....Your ideas need a home.
+    %button= link_to "Click here!", new_user_registration_path
+
+%footer
+  %p &copy; Rob Brown

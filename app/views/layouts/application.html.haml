@@ -1,0 +1,30 @@
+!!!
+%html
+%head
+  %title Note It  
+  = csrf_meta_tags
+  = csp_meta_tag
+
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+%body
+  %header
+    .header_inner
+      .container
+      = link_to "Note It", root_path, class: "container"
+      = link_to image_tag('logo.ico', size: "60x60"), root_path, id: "logo"
+      
+      %nav
+        - if user_signed_in?
+          = link_to "New Note", new_note_path
+          = link_to "Sign Out", destroy_user_session_path, method: :delete
+        - else
+          = link_to "log In", new_user_session_path
+
+  %p.notice= notice
+  %p.alert= notice
+
+  = yield
+
+

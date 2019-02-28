@@ -1,5 +1,5 @@
 #banner {
-  background-image: url(image_path("welcome_banner_image.jpg"));
+  background-image: url(image_path("welcome_banner.jpeg"));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -40,7 +40,8 @@
 }
 
 #callouts {
-  background-image: url(image_path("callout_background.jpg"));
+  background-image: url(image_path("key.jpeg"));
+  opacity: .8;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -48,16 +49,18 @@
   min-height: 400px;
   display: table;
   .callout_inner {
-    display: table-cell;
+    display: grid;
     vertical-align: middle;
   }
   .callout {
+    margin-top: 100px;
+    line-height: 1.3;
     text-align: center;
-    width: 33.3333%;
+    width: 33.333%;
     padding: 1.5rem 2,5%;
     float: left;
     h2 {
-      @include bold_font:
+      @include bold_font;
       color: white;
       margin-bottom: 0;
     }

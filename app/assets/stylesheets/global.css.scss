@@ -1,27 +1,26 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
-$green: #33CD99;
+$green: #3176E6;
 
-@mixin blod_font {
-  font-family: "Brandon Grotesque", "Helvetica Neue", sans-serif;
+@mixin bold_font {
+  font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing; antilaliased;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  padding-top: 4.5em;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 6rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  padding: 3.5rem 0;
 }
 
 .wrapper_with_padding {
@@ -42,7 +41,7 @@ body {
 button, .button {
   border: none;
   outline: none;
-  background-color: $green;
+  background: $green;
   padding: 1rem 3.5rem;
   border-radius: 2rem;
   a {
@@ -60,20 +59,31 @@ a {
   color: $green;
   text-decoration: none;
   &:hover {
-    color: $green;
+    color: $dark_gray;
   }
 }
 
 header {
-  background-color: $dark_gray;
+  background: $dark_gray;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1.75rem 0;
+  padding: 1.35rem 0;
   border-bottom: 7px solid $green;
   .header_inner {
     width: 90%;
     margin: 0 auto;
+    .container {
+      color: white;
+      letter-spacing: -2px;
+      font-size: 30px;
+      position: absolute;
+      margin-left: 70px;
+      line-height: 2;
+      &:hover {
+        color: $green;
+      }
+    }
     #logo {
       display: inline-block;
       width: 10rem;
@@ -85,7 +95,7 @@ header {
         text-decoration: none;
         color: white;
         font-size: 1.1rem;
-        line-height: 1.5;
+        line-height: 3.3;
         margin-left: 1rem;
         &:hover {
           color: $green;
@@ -96,16 +106,23 @@ header {
 }
 
 footer {
-  background-color: $dark_gray;
+  background: $dark_gray;
   width: 100%;
   padding: 2rem 0;
-  text-align: center;
   color: white;
+  text-align: center;
   @include bold_font;
   p {
     margin: 0;
     font-size: .85rem;
   }
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid $light_gray;
+  border-radius: .4rem;
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -115,9 +132,3 @@ input[type="text"], input[type="email"], input[type="password"] {
 textarea {
   min-height: 200px;
 }
-
-
-
-
-
-
